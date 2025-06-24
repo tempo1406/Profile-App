@@ -13,7 +13,6 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   const [isDarkMode, setIsDarkMode] = useState(colorScheme === 'dark');
   const [isSystemTheme, setIsSystemTheme] = useState(true);
 
-  // Update theme when system theme changes, but only if using system theme
   useEffect(() => {
     if (isSystemTheme) {
       setIsDarkMode(colorScheme === 'dark');
@@ -22,7 +21,7 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
 
   const toggleTheme = () => {
     setIsDarkMode(prev => !prev);
-    setIsSystemTheme(false); // User has manually set the theme
+    setIsSystemTheme(false);
   };
 
   return (

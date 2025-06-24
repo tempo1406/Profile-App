@@ -6,7 +6,6 @@ import { ThemeProvider } from "../context/ThemeContext";
 import './globals.css';
 
 export default function RootLayout() {
-  // Get the device color scheme
   const colorScheme = useColorScheme();
 
   return (
